@@ -69,7 +69,6 @@
           <CommandLine name="technique_id=T1218.004,technique_name=InstallUtil" condition="contains all">/logfile=;/LogToConsole=false;/U</CommandLine>
         </Rule>
         <OriginalFileName name="technique_id=T1218.011,technique_name=Rundll32" condition="contains">rundll32.exe</OriginalFileName>
-        <OriginalFileName name="technique_id=T1546.008,technique_name=Windows Error Reporting" condition="contains">werfault.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1033,technique_name=System Owner/User Discovery" condition="is">whoami.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1016,technique_name=System Network Configuration Discovery" condition="is">ipconfig.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1057,technique_name=Process Discovery" condition="is">tasklist.exe</OriginalFileName>
@@ -1280,9 +1279,9 @@
         <TargetFilename condition="begin with">C:\Windows\Tasks\</TargetFilename>
         <TargetFilename condition="contains">\Startup</TargetFilename>
         <TargetFilename condition="contains">\Start Menu</TargetFilename>
-        <TargetFilename name="technique_id=T1574.010,technique_name=File System Permissions Weakness" condition="begin with">C:\Windows\SysWoW64</TargetFilename>
-        <TargetFilename name="technique_id=T1574.010,technique_name=File System Permissions Weakness" condition="begin with">C:\Windows\System32</TargetFilename>
-        <TargetFilename name="technique_id=T1574.010,technique_name=File System Permissions Weakness" condition="begin with">C:\Windows\</TargetFilename>
+        <TargetFilename name="technique_id=T1574.010,technique_name=Services File Permissions Weakness" condition="begin with">C:\Windows\SysWoW64</TargetFilename>
+        <TargetFilename name="technique_id=T1574.010,technique_name=Services File Permissions Weakness" condition="begin with">C:\Windows\System32</TargetFilename>
+        <TargetFilename name="technique_id=T1574.010,technique_name=Services File Permissions Weakness" condition="begin with">C:\Windows\</TargetFilename>
         <TargetFilename condition="end with">.sys</TargetFilename>
         <TargetFilename condition="contains">\*lsass*.dmp\</TargetFilename>
         <Image condition="image">taskmgr.exe</Image>
@@ -1301,12 +1300,12 @@
         <TargetFilename name="technique_id=T1047,technique_name=Windows Management Instrumentation" condition="begin with">C:\Windows\System32\Wbem</TargetFilename>
         <TargetFilename name="technique_id=T1047,technique_name=Windows Management Instrumentation" condition="begin with">C:\Windows\SysWOW64\Wbem</TargetFilename>
         <Image name="technique_id=T1047,technique_name=Windows Management Instrumentation" condition="begin with">C:\WINDOWS\system32\wbem\scrcons.exe</Image>
-        <TargetFilename name="technique_id=T1546.008,technique_name=Services File Permissions Weakness" condition="begin with">C:\Windows\Temp\</TargetFilename>
-        <TargetFilename name="technique_id=T1546.008,technique_name=Services File Permissions Weakness" condition="begin with">C:\Program\</TargetFilename>
-        <TargetFilename name="technique_id=T1574.010,technique_name=File System Permissions Weakness" condition="begin with">C:\Temp\</TargetFilename>
-        <TargetFilename name="technique_id=T1574.010,technique_name=File System Permissions Weakness" condition="begin with">C:\PerfLogs\</TargetFilename>
-        <TargetFilename name="technique_id=T1574.010,technique_name=File System Permissions Weakness" condition="begin with">C:\Users\Public\</TargetFilename>
-        <TargetFilename name="technique_id=T1574.010,technique_name=File System Permissions Weakness" condition="contains">\AppData\Temp\</TargetFilename>
+        <TargetFilename name="technique_id=T1574.010,technique_name=Services File Permissions Weakness" condition="begin with">C:\Windows\Temp\</TargetFilename>
+        <TargetFilename name="technique_id=T1574.010,technique_name=Services File Permissions Weakness" condition="begin with">C:\Program\</TargetFilename>
+        <TargetFilename name="technique_id=T1574.010,technique_name=Services File Permissions Weakness" condition="begin with">C:\Temp\</TargetFilename>
+        <TargetFilename name="technique_id=T1574.010,technique_name=Services File Permissions Weakness" condition="begin with">C:\PerfLogs\</TargetFilename>
+        <TargetFilename name="technique_id=T1574.010,technique_name=Services File Permissions Weakness" condition="begin with">C:\Users\Public\</TargetFilename>
+        <TargetFilename name="technique_id=T1574.010,technique_name=Services File Permissions Weakness" condition="contains">\AppData\Temp\</TargetFilename>
       </FileCreate>
     </RuleGroup>
     <!-- Event ID 11 == FileCreate - Excludes -->
