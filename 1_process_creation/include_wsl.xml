@@ -12,8 +12,8 @@
         <CommandLine name="technique_id=T1202,technique_name=Indirect Command Execution" condition="contains all">wsl.exe -u root</CommandLine> <!--Run a bash command as root-->
         <CommandLine name="technique_id=T1202,technique_name=Indirect Command Execution" condition="contains all">wsl.exe --exec bash</CommandLine> <!--This will execute a command within the distro -->
         <Rule name="Remote Copy via wsl" groupRelation="and">
-          <CommandLine name="technique_id=T1544,technique_name=Remote File Copy" condition="contains all">wsl.exe --exec bash</CommandLine>
-          <CommandLine name="technique_id=T1544,technique_name=Remote File Copy" condition="contains all">/dev/tcp</CommandLine>
+          <CommandLine name="technique_id=T1105,technique_name=Ingress Tool Transfer" condition="contains all">wsl.exe --exec bash</CommandLine>
+          <CommandLine name="technique_id=T1105,technique_name=Ingress Tool Transfer" condition="contains all">/dev/tcp</CommandLine>
         </Rule>
       </ProcessCreate>
     </RuleGroup>

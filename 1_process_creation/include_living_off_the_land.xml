@@ -116,12 +116,8 @@
         <OriginalFileName name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="is">msdt.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="is">rasautou.exe</OriginalFileName>
         <Rule name="Alternate Data Streams with Print" groupRelation="and">
-          <OriginalFileName name="technique_id=T1544,technique_name=Remote File Copy" condition="is">print.exe</OriginalFileName>
-          <CommandLine name="technique_id=T1544,technique_name=Remote File Copy" condition="contains">:</CommandLine>
-        </Rule>
-        <Rule name="Alternate Data Streams with Regedit.exe" groupRelation="and">
-          <OriginalFileName name="technique_id=T1544,technique_name=Remote File Copy" condition="is">regedit.exe</OriginalFileName>
-          <CommandLine name="technique_id=T1544,technique_name=Remote File Copy" condition="contains">:</CommandLine>
+          <OriginalFileName name="technique_id=T1105,technique_name=Ingress Tool Transfer" condition="is">print.exe</OriginalFileName> <!-- https://lolbas-project.github.io/lolbas/Binaries/Print/ -->
+          <CommandLine name="technique_id=T1105,technique_name=Ingress Tool Transfer" condition="contains">:</CommandLine>
         </Rule>
         <OriginalFileName name="technique_id=1218,technique_name=Signed Binary Proxy Execution" condition="is">Register-cimprovider.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1003,technique_name=Credential Dumping" condition="is">rpcping.exe</OriginalFileName>
@@ -158,12 +154,12 @@
         <ParentImage name="technique_id=T1202,technique_name=Indirect Command Execution" condition="is">wsl.exe</ParentImage> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Wsl/ -->
         <ParentImage name="technique_id=T1227,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">vsjitdebugger.exe</ParentImage>
         <CommandLine name="technique_id=T1227,technique_name=Trusted Developer Utilities Proxy Execution" condition="contains">vsjitdebugger</CommandLine>
-        <CommandLine name="technique_id=T1544,technique_name=Remote File Copy" condition="contains all">update --download</CommandLine>
+        <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">update --download</CommandLine>
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">update.exe --update</CommandLine>
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">update.exe --ProcessStart</CommandLine>
         <OriginalFileName name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">tracker.exe</OriginalFileName> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Tracker/ -->
         <OriginalFileName name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">te.exe</OriginalFileName> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Te/ -->
-        <CommandLine name="technique_id=T1544,technique_name=Remote File Copy" condition="contains all">squirrel --download</CommandLine>
+        <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">squirrel --download</CommandLine>
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">squirrel.exe --update</CommandLine> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Squirrel/ -->
         <OriginalFileName name="technique_id=T1059.001,technique_name=PowerShell" condition="contains">Sqlps.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1003,technique_name=Credential Dumping" condition="is">sqldumper.exe</OriginalFileName> <!-- Should rarely be ran -->
@@ -174,9 +170,9 @@
         </Rule>
         <OriginalFileName name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="is">msxls.exe</OriginalFileName> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Msxsl/ -->
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains">msdeploy.exe -verb:sync -source:RunCommand</CommandLine> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Msdeploy/ -->
-        <ParentImage name="technique_id=T1127,technique_name=Trusted Binary Proxy Execution" condition="is">mftrace.exe</ParentImage> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Mftrace/ -->
-        <ParentImage name="technique_id=T1127,technique_name=Trusted Binary Proxy Execution" condition="is">dxcap.exe</ParentImage> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Dxcap/ -->
-        <CommandLine name="technique_id=T1127,technique_name=Trusted Binary Proxy Execution" condition="contains all">dxcap.exe -c</CommandLine> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Dxcap/ -->
+        <ParentImage name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">mftrace.exe</ParentImage> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Mftrace/ -->
+        <ParentImage name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">dxcap.exe</ParentImage> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Dxcap/ -->
+        <CommandLine name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="contains all">dxcap.exe -c</CommandLine> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Dxcap/ -->
         <OriginalFileName name="technique_id=T1057,technique_name=Process Discovery" condition="is">taskmgr.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1112,technique_name=Modify Registry" condition="is">regedit.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1518.001,technique_name=Security Software Discovery" condition="is">netsh.exe</OriginalFileName>
