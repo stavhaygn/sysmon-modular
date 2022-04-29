@@ -181,12 +181,8 @@
         <OriginalFileName name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="is">msdt.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="is">rasautou.exe</OriginalFileName>
         <Rule name="Alternate Data Streams with Print" groupRelation="and">
-          <OriginalFileName name="technique_id=T1544,technique_name=Remote File Copy" condition="is">print.exe</OriginalFileName>
-          <CommandLine name="technique_id=T1544,technique_name=Remote File Copy" condition="contains">:</CommandLine>
-        </Rule>
-        <Rule name="Alternate Data Streams with Regedit.exe" groupRelation="and">
-          <OriginalFileName name="technique_id=T1544,technique_name=Remote File Copy" condition="is">regedit.exe</OriginalFileName>
-          <CommandLine name="technique_id=T1544,technique_name=Remote File Copy" condition="contains">:</CommandLine>
+          <OriginalFileName name="technique_id=T1105,technique_name=Ingress Tool Transfer" condition="is">print.exe</OriginalFileName>
+          <CommandLine name="technique_id=T1105,technique_name=Ingress Tool Transfer" condition="contains">:</CommandLine>
         </Rule>
         <OriginalFileName name="technique_id=1218,technique_name=Signed Binary Proxy Execution" condition="is">Register-cimprovider.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1003,technique_name=Credential Dumping" condition="is">rpcping.exe</OriginalFileName>
@@ -223,12 +219,12 @@
         <ParentImage name="technique_id=T1202,technique_name=Indirect Command Execution" condition="is">wsl.exe</ParentImage>
         <ParentImage name="technique_id=T1227,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">vsjitdebugger.exe</ParentImage>
         <CommandLine name="technique_id=T1227,technique_name=Trusted Developer Utilities Proxy Execution" condition="contains">vsjitdebugger</CommandLine>
-        <CommandLine name="technique_id=T1544,technique_name=Remote File Copy" condition="contains all">update --download</CommandLine>
+        <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">update --download</CommandLine>
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">update.exe --update</CommandLine>
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">update.exe --ProcessStart</CommandLine>
         <OriginalFileName name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">tracker.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">te.exe</OriginalFileName>
-        <CommandLine name="technique_id=T1544,technique_name=Remote File Copy" condition="contains all">squirrel --download</CommandLine>
+        <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">squirrel --download</CommandLine>
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">squirrel.exe --update</CommandLine>
         <OriginalFileName name="technique_id=T1059.001,technique_name=PowerShell" condition="contains">Sqlps.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1003,technique_name=Credential Dumping" condition="is">sqldumper.exe</OriginalFileName>
@@ -239,9 +235,9 @@
         </Rule>
         <OriginalFileName name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="is">msxls.exe</OriginalFileName>
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains">msdeploy.exe -verb:sync -source:RunCommand</CommandLine>
-        <ParentImage name="technique_id=T1127,technique_name=Trusted Binary Proxy Execution" condition="is">mftrace.exe</ParentImage>
-        <ParentImage name="technique_id=T1127,technique_name=Trusted Binary Proxy Execution" condition="is">dxcap.exe</ParentImage>
-        <CommandLine name="technique_id=T1127,technique_name=Trusted Binary Proxy Execution" condition="contains all">dxcap.exe -c</CommandLine>
+        <ParentImage name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">mftrace.exe</ParentImage>
+        <ParentImage name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">dxcap.exe</ParentImage>
+        <CommandLine name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="contains all">dxcap.exe -c</CommandLine>
         <OriginalFileName name="technique_id=T1057,technique_name=Process Discovery" condition="is">taskmgr.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1112,technique_name=Modify Registry" condition="is">regedit.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1518.001,technique_name=Security Software Discovery" condition="is">netsh.exe</OriginalFileName>
@@ -397,8 +393,8 @@
         <CommandLine name="technique_id=T1202,technique_name=Indirect Command Execution" condition="contains all">wsl.exe -u root</CommandLine>
         <CommandLine name="technique_id=T1202,technique_name=Indirect Command Execution" condition="contains all">wsl.exe --exec bash</CommandLine>
         <Rule name="Remote Copy via wsl" groupRelation="and">
-          <CommandLine name="technique_id=T1544,technique_name=Remote File Copy" condition="contains all">wsl.exe --exec bash</CommandLine>
-          <CommandLine name="technique_id=T1544,technique_name=Remote File Copy" condition="contains all">/dev/tcp</CommandLine>
+          <CommandLine name="technique_id=T1105,technique_name=Ingress Tool Transfer" condition="contains all">wsl.exe --exec bash</CommandLine>
+          <CommandLine name="technique_id=T1105,technique_name=Ingress Tool Transfer" condition="contains all">/dev/tcp</CommandLine>
         </Rule>
       </ProcessCreate>
     </RuleGroup>
@@ -1295,12 +1291,12 @@
         <TargetFilename condition="end with">.vbe</TargetFilename>
         <TargetFilename condition="end with">.vbs</TargetFilename>
         <Rule groupRelation="and">
-          <TargetFilename name="technique_id=T1562.001,technique_name=Disable or Modify tools" condition="begin with">C:\Windows\System32\CodeIntegrity\CIPolicies\Active\</TargetFilename>
-          <TargetFilename name="technique_id=T1562.001,technique_name=Disable or Modify tools" condition="end with">.cip</TargetFilename>
+          <TargetFilename name="technique_id=T1562.001,technique_name=Disable or Modify Tools" condition="begin with">C:\Windows\System32\CodeIntegrity\CIPolicies\Active\</TargetFilename>
+          <TargetFilename name="technique_id=T1562.001,technique_name=Disable or Modify Tools" condition="end with">.cip</TargetFilename>
         </Rule>
         <Rule groupRelation="and">
-          <TargetFilename name="technique_id=T1562.001,technique_name=Disable or Modify tools" condition="begin with">C:\Windows\System32\CodeIntegrity\</TargetFilename>
-          <TargetFilename name="technique_id=T1562.001,technique_name=Disable or Modify tools" condition="end with">.p7b</TargetFilename>
+          <TargetFilename name="technique_id=T1562.001,technique_name=Disable or Modify Tools" condition="begin with">C:\Windows\System32\CodeIntegrity\</TargetFilename>
+          <TargetFilename name="technique_id=T1562.001,technique_name=Disable or Modify Tools" condition="end with">.p7b</TargetFilename>
         </Rule>
         <TargetFilename name="technique_id=T1047,technique_name=Windows Management Instrumentation" condition="begin with">C:\Windows\System32\Wbem</TargetFilename>
         <TargetFilename name="technique_id=T1047,technique_name=Windows Management Instrumentation" condition="begin with">C:\Windows\SysWOW64\Wbem</TargetFilename>
