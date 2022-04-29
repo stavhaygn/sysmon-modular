@@ -216,8 +216,8 @@
         <CommandLine name="technique_id=T1216,technique_name=Signed Script Proxy Execution" condition="contains">CL_Invocation</CommandLine>
         <CommandLine name="technique_id=T1216,technique_name=Signed Script Proxy Execution" condition="contains">CL_Mutexverifiers</CommandLine>
         <ParentImage name="technique_id=T1202,technique_name=Indirect Command Execution" condition="is">wsl.exe</ParentImage>
-        <ParentImage name="technique_id=T1227,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">vsjitdebugger.exe</ParentImage>
-        <CommandLine name="technique_id=T1227,technique_name=Trusted Developer Utilities Proxy Execution" condition="contains">vsjitdebugger</CommandLine>
+        <ParentImage name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">vsjitdebugger.exe</ParentImage>
+        <CommandLine name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="contains">vsjitdebugger</CommandLine>
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">update --download</CommandLine>
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">update.exe --update</CommandLine>
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">update.exe --ProcessStart</CommandLine>
@@ -965,7 +965,7 @@
         <OriginalFileName name="technique_id=T1112,technique_name=Modify Registry" condition="is">regsvc.dll</OriginalFileName>
         <Rule groupRelation="and">
           <Image condition="end with">rundll32.exe</Image>
-          <OriginalFileName name="technique_id=T1003.004,technique_name=LSASS Memory" condition="is">comsvcs.dll</OriginalFileName>
+          <OriginalFileName name="technique_id=T1003.001,technique_name=LSASS Memory" condition="is">comsvcs.dll</OriginalFileName>
         </Rule>
         <OriginalFileName name="technique_id=T1053,technique_name=Scheduled Task/Job" condition="is">taskschd.dll</OriginalFileName>
         <ImageLoaded name="technique_id=T1218.010,technique_name=Regsvr32" condition="end with">scrobj.dll</ImageLoaded>
