@@ -152,8 +152,8 @@
         <CommandLine name="technique_id=T1216,technique_name=Signed Script Proxy Execution" condition="contains">CL_Invocation</CommandLine>
         <CommandLine name="technique_id=T1216,technique_name=Signed Script Proxy Execution" condition="contains">CL_Mutexverifiers</CommandLine>
         <ParentImage name="technique_id=T1202,technique_name=Indirect Command Execution" condition="is">wsl.exe</ParentImage> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Wsl/ -->
-        <ParentImage name="technique_id=T1227,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">vsjitdebugger.exe</ParentImage>
-        <CommandLine name="technique_id=T1227,technique_name=Trusted Developer Utilities Proxy Execution" condition="contains">vsjitdebugger</CommandLine>
+        <ParentImage name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="is">vsjitdebugger.exe</ParentImage> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Vsjitdebugger/ -->
+        <CommandLine name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="contains">vsjitdebugger</CommandLine> <!-- https://lolbas-project.github.io/lolbas/OtherMSBinaries/Vsjitdebugger/ -->
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">update --download</CommandLine>
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">update.exe --update</CommandLine>
         <CommandLine name="technique_id=T1218,technique_name=Signed Binary Proxy Execution" condition="contains all">update.exe --ProcessStart</CommandLine>
