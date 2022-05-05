@@ -3,11 +3,11 @@
 		<RuleGroup name="" groupRelation="or">
 			<RegistryEvent onmatch="include">
 				<!--Microsoft:Office:Security _features-->
-				<!--https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry_event/sysmon_disable_microsoft_office_security_features.yml-->
-				<TargetObject name="T1562,office" condition="end with">\VBAWarnings</TargetObject> 
-				<TargetObject name="T1562,office" condition="end with">\DisableInternetFilesInPV</TargetObject>
-				<TargetObject name="T1562,office" condition="end with">\DisableUnsafeLocationsInPV</TargetObject> 
-				<TargetObject name="T1562,office" condition="end with">\DisableAttachementsInPV</TargetObject>				
+				<!--https://github.com/SigmaHQ/sigma/blob/master/rules/windows/registry/registry_set/registry_set_disable_microsoft_office_security_features.yml-->
+				<TargetObject name="T1562.001,technique_name=Disable or Modify Tools" condition="end with">\VBAWarnings</TargetObject> 
+				<TargetObject name="T1562.001,technique_name=Disable or Modify Tools" condition="end with">\DisableInternetFilesInPV</TargetObject>
+				<TargetObject name="T1562.001,technique_name=Disable or Modify Tools" condition="end with">\DisableUnsafeLocationsInPV</TargetObject> 
+				<TargetObject name="T1562.001,technique_name=Disable or Modify Tools" condition="end with">\DisableAttachementsInPV</TargetObject>				
 			</RegistryEvent>
 		</RuleGroup>
 	</EventFiltering>
