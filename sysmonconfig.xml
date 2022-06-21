@@ -429,7 +429,7 @@
         <ParentCommandLine condition="is">"C:\Program Files\Microsoft Monitoring Agent\Agent\MonitoringHost.exe" -Embedding</ParentCommandLine>
         <Rule groupRelation="and">
           <ParentImage condition="is">"C:\Program Files\Microsoft Monitoring Agent\Agent\MonitoringHost.exe"</ParentImage>
-          <CommandLine condition="is">C:\Windows\system32\cscript.exe" /nologo "MonitorKnowledgeDiscovery.vbs</CommandLine>
+          <CommandLine condition="is">"C:\Windows\system32\cscript.exe" /nologo "MonitorKnowledgeDiscovery.vbs"</CommandLine>
         </Rule>
         <ParentImage condition="end with">C:\Program Files (x86)\Cisco\Cisco AnyConnect Secure Mobility Client\vpnagent.exe</ParentImage>
         <CommandLine condition="begin with">C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe</CommandLine>
@@ -1415,33 +1415,33 @@
         <TargetObject name="technique_id=T1137.006,technique_name=Add-ins" condition="contains all">\Microsoft\Office;\Outlook\Addins</TargetObject>
         <TargetObject name="technique_id=T1137.006,technique_name=Add-ins" condition="contains">\Software\Microsoft\VSTO\Security\Inclusion</TargetObject>
         <TargetObject name="technique_id=T1137.006,technique_name=Add-ins" condition="contains">\Software\Microsoft\VSTO\SolutionMetadata</TargetObject>
-        <TargetObject condition="contains all">HKCU\SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\Account Name</TargetObject>
-        <TargetObject condition="contains all">HKCU\SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\Display Name</TargetObject>
-        <TargetObject condition="contains all">HKCU\SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\Email</TargetObject>
-        <TargetObject condition="contains all">HKCU\SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\HTTP Password</TargetObject>
-        <TargetObject condition="contains all">HKCU\SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\HTTP User</TargetObject>
-        <TargetObject condition="contains all">HKCU\SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\IMAP Password</TargetObject>
-        <TargetObject condition="contains all">HKCU\SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\IMAP User</TargetObject>
-        <TargetObject condition="contains all">HKCU\SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\MAPI Provider</TargetObject>
-        <TargetObject condition="contains all">HKCU\SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\POP3 Password</TargetObject>
-        <TargetObject condition="contains all">HKCU\SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\POP3 User</TargetObject>
-        <TargetObject condition="contains all">HKCU\SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\SMTP Password</TargetObject>
-        <TargetObject condition="contains all">HKCU\SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\SMTP User</TargetObject>
-        <TargetObject name="technique_id=T1137.004,technique_name=Outlook Home Page" condition="contains all">hkcu\software\microsoft\office\;\outlook\security\</TargetObject>
-        <TargetObject name="technique_id=T1137.004,technique_name=Outlook Home Page" condition="contains all">hkcu\software\microsoft\office\;\outlook\today\</TargetObject>
-        <TargetObject name="technique_id=T1137.004,technique_name=Outlook Home Page" condition="contains all">hkcu\software\microsoft\office\;\outlook\webview\;\</TargetObject>
-        <TargetObject condition="contains all">hkcu\software\microsoft\office\;\word\options\globaldotname</TargetObject>
-        <TargetObject condition="contains all">hkcu\software\microsoft\office\16.0\common\internet\server cache\</TargetObject>
+        <TargetObject condition="contains all">SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\Account Name</TargetObject>
+        <TargetObject condition="contains all">SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\Display Name</TargetObject>
+        <TargetObject condition="contains all">SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\Email</TargetObject>
+        <TargetObject condition="contains all">SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\HTTP Password</TargetObject>
+        <TargetObject condition="contains all">SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\HTTP User</TargetObject>
+        <TargetObject condition="contains all">SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\IMAP Password</TargetObject>
+        <TargetObject condition="contains all">SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\IMAP User</TargetObject>
+        <TargetObject condition="contains all">SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\MAPI Provider</TargetObject>
+        <TargetObject condition="contains all">SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\POP3 Password</TargetObject>
+        <TargetObject condition="contains all">SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\POP3 User</TargetObject>
+        <TargetObject condition="contains all">SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\SMTP Password</TargetObject>
+        <TargetObject condition="contains all">SOFTWARE\Microsoft\Office\;\Outlook\Profiles\;\9375CFF0413111d3B88A00104B2A6676\;\SMTP User</TargetObject>
+        <TargetObject name="technique_id=T1137.004,technique_name=Outlook Home Page" condition="contains all">software\microsoft\office\;\outlook\security\</TargetObject>
+        <TargetObject name="technique_id=T1137.004,technique_name=Outlook Home Page" condition="contains all">software\microsoft\office\;\outlook\today\</TargetObject>
+        <TargetObject name="technique_id=T1137.004,technique_name=Outlook Home Page" condition="contains all">software\microsoft\office\;\outlook\webview\;\</TargetObject>
+        <TargetObject condition="contains all">software\microsoft\office\;\word\options\globaldotname</TargetObject>
+        <TargetObject condition="contains all">software\microsoft\office\16.0\common\internet\server cache\</TargetObject>
         <TargetObject condition="contains">\Security\Trusted Documents\TrustRecords</TargetObject>
         <TargetObject condition="contains">\Security\Trusted Documents\</TargetObject>
         <TargetObject condition="end with">\UrlUpdateInfo</TargetObject>
-        <TargetObject condition="begin with">hkcu\software\microsoft\windows\currentversion\explorer\recentdocs\.docx\</TargetObject>
-        <TargetObject condition="begin with">hkcu\software\microsoft\windows\currentversion\explorer\recentdocs\.xlsx\</TargetObject>
+        <TargetObject condition="contains">software\microsoft\windows\currentversion\explorer\recentdocs\.docx\</TargetObject>
+        <TargetObject condition="contains">software\microsoft\windows\currentversion\explorer\recentdocs\.xlsx\</TargetObject>
         <TargetObject condition="begin with">HKLM\SOFTWARE\Clients\Mail\Microsoft Outlook\DllPath</TargetObject>
         <TargetObject condition="begin with">HKLM\SOFTWARE\Clients\Mail\Microsoft Outlook\DllPathEx</TargetObject>
         <TargetObject condition="contains">software\microsoft\Office test\special\perf\</TargetObject>
-        <TargetObject condition="contains all">hkcu\software\microsoft\office\;\Options\OPEN</TargetObject>
-        <TargetObject name="technique_id=T1137.006,technique_name=Add-ins" condition="contains all">\Microsoft\Office;\PowerPoint\Addins</TargetObject>
+        <TargetObject condition="contains all">software\microsoft\office\;\Options\OPEN</TargetObject>
+        <TargetObject name="technique_id=T1137.006,technique_name=Office Add-ins" condition="contains all">\Microsoft\Office;\PowerPoint\Addins</TargetObject>
         <TargetObject name="T1559.002,technique_name=Dynamic Data Exchange" condition="end with">\Word\Security\AllowDDE</TargetObject>
         <TargetObject name="T1559.002,technique_name=Dynamic Data Exchange" condition="end with">\Excel\Security\DisableDDEServerLaunch</TargetObject>
         <TargetObject name="T1559.002,technique_name=Dynamic Data Exchange" condition="end with">\Excel\Security\DisableDDEServerLookup</TargetObject>
@@ -1496,7 +1496,7 @@
         <TargetObject name="technique_id=T1005,technique_name=Data from Local System" condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\usb</TargetObject>
         <TargetObject name="technique_id=T1005,technique_name=Data from Local System" condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location</TargetObject>
         <TargetObject name="technique_id=T1005,technique_name=Data from Local System" condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\contacts</TargetObject>
-        <TargetObject name="technique_id=T1056.001,technique_name=Keylogging" condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\hunmanInterfaceDevice</TargetObject>
+        <TargetObject name="technique_id=T1056.001,technique_name=Keylogging" condition="contains">\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\humanInterfaceDevice</TargetObject>
         <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Provider</TargetObject>
         <TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Plap Providers</TargetObject>
         <TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Lsa</TargetObject>
