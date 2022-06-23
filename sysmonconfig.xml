@@ -1342,6 +1342,12 @@
     <!-- Event ID 12,13,14 == RegObject added/deleted, RegValue Set, RegObject Renamed - Includes -->
     <RuleGroup groupRelation="or">
       <RegistryEvent onmatch="include">
+        <TargetObject name="technique_id=T1546.008,technique_name=Accessibility Features" condition="contains">\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\sethc.exe\Debugger</TargetObject>
+        <TargetObject name="technique_id=T1546.008,technique_name=Accessibility Features" condition="contains">\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\utilman.exe\Debugger</TargetObject>
+        <TargetObject name="technique_id=T1546.008,technique_name=Accessibility Features" condition="contains">\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\osk.exe\Debugger</TargetObject>
+        <TargetObject name="technique_id=T1546.008,technique_name=Accessibility Features" condition="contains">\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Magnify.exe\Debugger</TargetObject>
+        <TargetObject name="technique_id=T1546.008,technique_name=Accessibility Features" condition="contains">\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Narrator.exe\Debugger</TargetObject>
+        <TargetObject name="technique_id=T1546.008,technique_name=Accessibility Features" condition="contains">\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\DisplaySwitch.exe\Debugger</TargetObject>
         <TargetObject name="technique_id=T1546.011,technique_name=Application Shimming" condition="contains">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\InstalledSDB</TargetObject>
         <TargetObject name="technique_id=T1546.011,technique_name=Application Shimming" condition="contains">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Custom</TargetObject>
         <TargetObject name="technique_id=T1547.002,technique_name=Authentication Package" condition="begin with">HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Authentication</TargetObject>
