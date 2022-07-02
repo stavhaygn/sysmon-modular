@@ -71,7 +71,7 @@
           <ParentImage name="technique_id=T1087,technique_name=Account Discovery" condition="is">cmdkey.exe</ParentImage> <!--Local code compilation-->
           <CommandLine condition="contains">/list</CommandLine>
         </Rule>
-        <OriginalFileName name="technique=T1053,technique_name=At.exe Peridoic Secheduled Task" condition="contains">At.exe</OriginalFileName>
+        <OriginalFileName name="technique_id=T1053,technique_name=Scheduled Task/Job" condition="is">at.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1016,technique_name=System Network Configuration Discovery" condition="contains any">nbtstat.exe;nbtinfo.exe</OriginalFileName> <!--Microsoft:Windows: NetBIOS statistics, attackers use to enumerate local network -->
         <OriginalFileName name="technique_id=T1057,technique_name=Process Discovery" condition="is">qwinsta.exe</OriginalFileName> <!--Microsoft:Windows: Remotely query login sessions on a server or workstation | Credit @ion-storm -->
         <OriginalFileName name="technique_id=T1057,technique_name=Process Discovery" condition="is">rwinsta.exe</OriginalFileName> <!--Microsoft:Windows: Disconnect remote sessions | Credit @ion-storm -->
@@ -79,7 +79,7 @@
         <OriginalFileName name="technique_id=T1218,technique_name=System Binary Proxy Execution" condition="is">replace.exe</OriginalFileName>
         <Image name="technique_id=T1218,technique_name=System Binary Proxy Execution" condition="image">jjs.exe</Image>
         <Image name="technique_id=T1218,technique_name=System Binary Proxy Execution" condition="image">appcmd.exe</Image>
-                <OriginalFileName name="technique_id=T1543.003,technique_name=Windows Service" condition="is">sc.exe</OriginalFileName>
+        <OriginalFileName name="technique_id=T1543.003,technique_name=Windows Service" condition="is">sc.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1202,technique_name=Indirect Command Execution" condition="is">certutil.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1552.001,technique_name=Credentials In Files" condition="is">findstr.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1552.001,technique_name=Credentials In Files" condition="is">where.exe</OriginalFileName>
@@ -108,7 +108,7 @@
         <Image name="technique_id=T1218,technique_name=System Binary Proxy Execution" condition="is">diskshadow.exe</Image> <!--This only applies to versions of Windows Server-->
         <CommandLine name="technique_id=T1218,technique_name=System Binary Proxy Execution" condition="contains all">diskshadow.exe /s</CommandLine> <!--This only applies to versions of Windows Server-->
         <ParentImage name="technique_id=T1003,technique_name=OS Credential Dumping" condition="is">diskshadow.exe</ParentImage> <!--This only applies to versions of Windows Server-->
-        <ParentImage name="technique=T1218,technique_name=System Binary Proxy Execution with FTP" condition="is">ftp.exe</ParentImage>
+        <ParentImage name="technique_id=T1202,technique_name=Indirect Command Execution" condition="is">ftp.exe</ParentImage> <!-- https://lolbas-project.github.io/lolbas/Binaries/Ftp/ -->
         <OriginalFileName name="technique_id=T1105,technique_name=Ingress Tool Transfer" condition="is">GfxDownloadWrapper.exe</OriginalFileName>
         <CommandLine name="technique_id=1218,technique_name=System Binary Proxy Execution" condition="contains">ieexec.exe http</CommandLine>
         <CommandLine name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="contains">ilasm</CommandLine>

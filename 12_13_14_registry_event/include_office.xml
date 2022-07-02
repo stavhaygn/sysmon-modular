@@ -32,7 +32,7 @@
         <TargetObject condition="begin with">HKLM\SOFTWARE\Clients\Mail\Microsoft Outlook\DllPathEx</TargetObject> <!--MDE-->
         <TargetObject condition="contains">software\microsoft\Office test\special\perf\</TargetObject> <!--MDE-->
         <TargetObject condition="contains all">software\microsoft\office\;\Options\OPEN</TargetObject> <!--MDE-->
-        <TargetObject name="technique_id=T1137.006,technique_name=Office Add-ins" condition="contains all">\Microsoft\Office;\PowerPoint\Addins</TargetObject> <!--Microsoft:Office: PowerPoint add-ins--><!--MDE-->
+        <TargetObject name="technique_id=T1137.006,technique_name=Add-ins" condition="contains all">\Microsoft\Office;\PowerPoint\Addins</TargetObject> <!--Microsoft:Office: PowerPoint add-ins--><!--MDE-->
       </RegistryEvent>
     </RuleGroup>
   </EventFiltering>
