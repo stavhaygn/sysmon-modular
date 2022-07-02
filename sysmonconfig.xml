@@ -135,7 +135,7 @@
           <ParentImage name="technique_id=T1087,technique_name=Account Discovery" condition="is">cmdkey.exe</ParentImage>
           <CommandLine condition="contains">/list</CommandLine>
         </Rule>
-        <OriginalFileName name="technique=T1053,technique_name=At.exe Peridoic Secheduled Task" condition="contains">At.exe</OriginalFileName>
+        <OriginalFileName name="technique_id=T1053,technique_name=Scheduled Task/Job" condition="is">at.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1016,technique_name=System Network Configuration Discovery" condition="contains any">nbtstat.exe;nbtinfo.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1057,technique_name=Process Discovery" condition="is">qwinsta.exe</OriginalFileName>
         <OriginalFileName name="technique_id=T1057,technique_name=Process Discovery" condition="is">rwinsta.exe</OriginalFileName>
@@ -172,7 +172,7 @@
         <Image name="technique_id=T1218,technique_name=System Binary Proxy Execution" condition="is">diskshadow.exe</Image>
         <CommandLine name="technique_id=T1218,technique_name=System Binary Proxy Execution" condition="contains all">diskshadow.exe /s</CommandLine>
         <ParentImage name="technique_id=T1003,technique_name=OS Credential Dumping" condition="is">diskshadow.exe</ParentImage>
-        <ParentImage name="technique=T1218,technique_name=System Binary Proxy Execution with FTP" condition="is">ftp.exe</ParentImage>
+        <ParentImage name="technique_id=T1202,technique_name=Indirect Command Execution" condition="is">ftp.exe</ParentImage>
         <OriginalFileName name="technique_id=T1105,technique_name=Ingress Tool Transfer" condition="is">GfxDownloadWrapper.exe</OriginalFileName>
         <CommandLine name="technique_id=1218,technique_name=System Binary Proxy Execution" condition="contains">ieexec.exe http</CommandLine>
         <CommandLine name="technique_id=T1127,technique_name=Trusted Developer Utilities Proxy Execution" condition="contains">ilasm</CommandLine>
@@ -1447,7 +1447,7 @@
         <TargetObject condition="begin with">HKLM\SOFTWARE\Clients\Mail\Microsoft Outlook\DllPathEx</TargetObject>
         <TargetObject condition="contains">software\microsoft\Office test\special\perf\</TargetObject>
         <TargetObject condition="contains all">software\microsoft\office\;\Options\OPEN</TargetObject>
-        <TargetObject name="technique_id=T1137.006,technique_name=Office Add-ins" condition="contains all">\Microsoft\Office;\PowerPoint\Addins</TargetObject>
+        <TargetObject name="technique_id=T1137.006,technique_name=Add-ins" condition="contains all">\Microsoft\Office;\PowerPoint\Addins</TargetObject>
         <TargetObject name="T1559.002,technique_name=Dynamic Data Exchange" condition="end with">\Word\Security\AllowDDE</TargetObject>
         <TargetObject name="T1559.002,technique_name=Dynamic Data Exchange" condition="end with">\Excel\Security\DisableDDEServerLaunch</TargetObject>
         <TargetObject name="T1559.002,technique_name=Dynamic Data Exchange" condition="end with">\Excel\Security\DisableDDEServerLookup</TargetObject>
